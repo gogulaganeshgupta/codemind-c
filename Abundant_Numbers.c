@@ -1,17 +1,17 @@
 #include<stdio.h>
 int main()
 {
-    int n,r,sum=0,h=1;
+    int n,r,sum=0,i;
     scanf("%d",&n);
-    while(n!=0)
+    for(i=1;i<n;i++)
     {
-        r=n%10;
-        sum=sum+r;
-        h=h*r;
-        n=n/10;
+        if(n%i==0)
+        {
+            sum=sum+i;
+        }
     }
-    if(sum==h)
-    printf("Spy Number");
+    if(sum>n)
+    printf("True");
     else
-    printf("Not Spy Number");
+    printf("False");
 }
