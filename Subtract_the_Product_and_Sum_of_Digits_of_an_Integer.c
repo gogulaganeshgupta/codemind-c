@@ -1,14 +1,20 @@
 #include<stdio.h>
 int main()
 {
-    int n,p=1,d,s=0;
+    int n,su=0,p=1,r;
     scanf("%d",&n);
-    while(n)
+    while(n>0)
     {
-        d=n%10;
-        s=s+d;
-        p=p*d;
+        r=n%10;
+        p=p*r;
+        su=su+r;
         n=n/10;
     }
-    printf("%d",p-s);
+    if(su>p)
+    printf("%d",su-p);
+    else
+    printf("%d",p-su);
+    return 0;
 }
+    
+    
